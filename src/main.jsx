@@ -4,10 +4,12 @@ import { BrowserRouter } from 'react-router-dom';
 import App from '@/App';
 import '@/index.css';
 import { Toaster } from '@/components/ui/toaster';
+import { HashRouter } from "react-router-dom";
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <HashRouter>
     <App />
     <Toaster />
-  </BrowserRouter>
+  </HashRouter>
 );
