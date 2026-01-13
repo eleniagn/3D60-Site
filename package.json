@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "rimraf .gh-pages && npm run build && gh-pages -d dist"
-
+    "deploy": "gh-pages -d dist"git
   },
   "dependencies": {
     "@babel/traverse": "^7.26.4",
