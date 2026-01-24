@@ -6,10 +6,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              3d60°
-            </span>
-            <p className="mt-4 text-slate-400 text-sm">Professional - 3D60 services.</p>
+            <img src="https://www.dropbox.com/scl/fi/mnb2v7f7qv33w3b546l9c/3d60-Final-V3.svg?rlkey=lztuzw6hjgi2ehwj28iq2kwha&st=28hr7mn5&raw=1" alt="3D60 Logo" className="h-24 w-auto object-contain" />
+            <p className="mt-4 text-slate-400 text-sm">Professional - 3D⁶⁰ services.</p>
           </div>
 
           <div>
@@ -24,9 +22,6 @@ const Footer = () => {
               <Link to="/3d-services" className="block text-slate-400 hover:text-blue-400 transition-colors text-sm">
                 3D Printing
               </Link>
-              <Link to="/drone-services" className="block text-slate-400 hover:text-blue-400 transition-colors text-sm">
-                Drone Services
-              </Link>
             </div>
           </div>
 
@@ -35,9 +30,6 @@ const Footer = () => {
             <div className="space-y-2">
               <Link to="/portfolio" className="block text-slate-400 hover:text-blue-400 transition-colors text-sm">
                 Portfolio
-              </Link>
-              <Link to="/contact" className="block text-slate-400 hover:text-blue-400 transition-colors text-sm">
-                Contact
               </Link>
               <Link to="/contact" className="block text-slate-400 hover:text-blue-400 transition-colors text-sm">
                 Get a Quote
@@ -64,9 +56,21 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-slate-800 text-center text-slate-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} 3d60°. All rights reserved.</p>
+       <div className="mt-8 pt-8 border-t border-slate-800 text-slate-400 text-sm relative flex flex-col sm:block">
+
+          {/* Powered by */}
+        <div className="text-center align-middle sm:absolute sm:left-0 ">
+            Powered by{" "}
+            <a href="https://entheum.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
+              Entheum
+            </a>
+          </div>
+
+          {/* Copyright */}
+          <p className="text-center mt-2 sm:mt-0">© 2026 3D⁶⁰. All rights reserved.</p>
+
         </div>
+
       </div>
     </footer>;
 };

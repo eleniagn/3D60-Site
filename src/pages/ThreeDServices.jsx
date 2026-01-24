@@ -4,46 +4,24 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Box as Cube, Layers, Printer, Zap, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const ThreeDServices = () => {
-  const services = [
-    {
-      icon: <Cube className="w-16 h-16" />,
-      title: '3D Design',
-      description: 'Transform your concepts into detailed 3D models with our expert design team',
-      features: [
-        'Custom CAD modeling',
-        'Product visualization',
-        'Technical drawings',
-        'Design optimization',
-      ],
-    },
-    {
-      icon: <Layers className="w-16 h-16" />,
-      title: '3D Prototyping',
-      description: 'Rapid prototyping to test and refine your designs before production',
-      features: [
-        'Functional prototypes',
-        'Design iteration',
-        'Material testing',
-        'Quality assurance',
-      ],
-    },
-    {
-      icon: <Printer className="w-16 h-16" />,
-      title: '3D Printing',
-      description: 'High-quality prints using state-of-the-art Creality K1 and Ender 3v2 printers',
-      features: [
-        'High-speed printing',
-        'Multiple materials',
-        'Precision accuracy',
-        'Large build volume',
-      ],
-    },
-  ];
-
-  return (
-    <>
+  const services = [{
+    icon: <Cube className="w-16 h-16" />,
+    title: '3D Design',
+    description: 'Transform your concepts into detailed 3D models with our expert design team',
+    features: ['Custom modeling', 'Product visualization', 'Technical drawings', 'Design optimization']
+  }, {
+    icon: <Layers className="w-16 h-16" />,
+    title: '3D Prototyping',
+    description: 'Rapid prototyping to test and refine your designs before production',
+    features: ['Functional prototypes', 'Design iteration', 'Material testing', 'Quality assurance']
+  }, {
+    icon: <Printer className="w-16 h-16" />,
+    title: '3D Printing',
+    description: 'High-quality prints using state-of-the-art Creality K1 and Ender 3v2 printers',
+    features: ['High-speed printing', 'Multiple materials', 'Precision accuracy', 'Large build volume']
+  }];
+  return <>
       <Helmet>
         <title>3D Services - Design, Prototyping & Printing | 3d60°</title>
         <meta name="description" content="Professional 3D design, prototyping, and printing services using Creality K1 and Ender 3v2 printers. Fast, reliable, and high-quality results." />
@@ -52,12 +30,15 @@ const ThreeDServices = () => {
       <div className="min-h-screen">
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900/20 via-slate-950 to-cyan-900/20">
           <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 30
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8
+          }} className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Full 3D Services
               </h1>
@@ -67,14 +48,16 @@ const ThreeDServices = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
-              {services.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-blue-500 transition-all duration-300"
-                >
+              {services.map((service, index) => <motion.div key={index} initial={{
+              opacity: 0,
+              y: 20
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.6,
+              delay: index * 0.2
+            }} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-blue-500 transition-all duration-300">
                   <div className="text-blue-400 mb-6">
                     {service.icon}
                   </div>
@@ -85,28 +68,29 @@ const ThreeDServices = () => {
                     {service.description}
                   </p>
                   <div className="space-y-3">
-                    {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
+                    {service.features.map((feature, idx) => <div key={idx} className="flex items-center space-x-2">
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-slate-300">{feature}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>)}
             </div>
           </div>
         </section>
 
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
           <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.8
+          }} className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Our Equipment
               </h2>
@@ -116,13 +100,17 @@ const ThreeDServices = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              x: -30
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} viewport={{
+              once: true
+            }} transition={{
+              duration: 0.8
+            }} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
                 <div className="flex items-center space-x-4 mb-6">
                   <Zap className="w-12 h-12 text-yellow-400" />
                   <h3 className="text-2xl font-bold text-white">Creality K1</h3>
@@ -146,13 +134,17 @@ const ThreeDServices = () => {
                 </div>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              x: 30
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} viewport={{
+              once: true
+            }} transition={{
+              duration: 0.8
+            }} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
                 <div className="flex items-center space-x-4 mb-6">
                   <Printer className="w-12 h-12 text-blue-400" />
                   <h3 className="text-2xl font-bold text-white">Ender 3v2</h3>
@@ -182,21 +174,31 @@ const ThreeDServices = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-              >
-                <img className="rounded-xl shadow-2xl w-full h-auto" alt="3D printer creating detailed prototype" src="https://images.unsplash.com/photo-1582879304034-43ab963e5edc" />
+              <motion.div initial={{
+              opacity: 0,
+              x: -30
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} viewport={{
+              once: true
+            }} transition={{
+              duration: 0.8
+            }}>
+                <img className="rounded-xl shadow-2xl w-full h-auto" alt="3D printer creating detailed prototype" src="https://horizons-cdn.hostinger.com/81a8bfd2-a209-4674-ac1b-ec683451e339/product_53715-zBn3q.jpg" />
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-              >
+              <motion.div initial={{
+              opacity: 0,
+              x: 30
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} viewport={{
+              once: true
+            }} transition={{
+              duration: 0.8
+            }}>
                 <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                   The 3D Process
                 </h2>
@@ -245,12 +247,17 @@ const ThreeDServices = () => {
 
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.8
+          }}>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Bring Your Design to Life?
               </h2>
@@ -266,8 +273,6 @@ const ThreeDServices = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>;
 };
-
 export default ThreeDServices;

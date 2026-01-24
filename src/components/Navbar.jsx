@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logo from '../../Photos/logo.svg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +13,7 @@ const Navbar = () => {
     { name: '3D Services', path: '/3d-services' },
     // { name: 'Drone Services', path: '/drone-services' },
     { name: 'Portfolio', path: '/portfolio' },
-    { name: 'Contact', path: '/contact' },
+    // { name: 'Contact', path: '/contact' },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -24,15 +23,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2">
-            {/* <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
-            >
-              3d60°
-            </motion.div> */}
-            <img className="h-40 w-20" src={logo} alt="3d60 logo" />
+            <img
+              src="https://www.dropbox.com/scl/fi/mnb2v7f7qv33w3b546l9c/3d60-Final-V3.svg?rlkey=lztuzw6hjgi2ehwj28iq2kwha&st=28hr7mn5&raw=1"
+              alt="3D60 Logo"
+              className="h-24 w-auto object-contain"
+            />
           </Link>
-          
 
           <div className="hidden md:flex items-center space-x-1">
             {navLinks.map((link) => (

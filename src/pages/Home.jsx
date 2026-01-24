@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Box as Cube, Plane, Printer, Camera, ArrowRight } from 'lucide-react';
+import { Box as Cube, Plane, Printer, Camera, ArrowRight, Clapperboard } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 const Home = () => {
   const services = [{
@@ -16,20 +16,20 @@ const Home = () => {
     description: 'High-speed printing with Creality K1 and reliable Ender 3v2',
     link: '/3d-services'
   }, {
-    icon: <Plane className="w-12 h-12" />,
-    title: 'Drone Photography',
-    description: 'Stunning 4K aerial footage for real estate and marketing',
-    link: '/drone-services'
+    icon: <Clapperboard className="w-12 h-12" />,
+    title: '3D Animation',
+    description: 'Conceptual and realistic renders that fit your needs',
+    link: '/3d-services'
   }, {
     icon: <Camera className="w-12 h-12" />,
-    title: 'Aerial Inspections',
-    description: 'Professional drone inspections with detailed reporting',
-    link: '/drone-services'
+    title: 'Architectual Renders',
+    description: 'Professional concepts and realistic renders for architectual projects',
+    link: '/3d-services'
   }];
   return <>
       <Helmet>
-        <title>3d60° - Professional 3D Services & Aerial Drone Solutions</title>
-        <meta name="description" content="Leading provider of 3D design, prototyping, printing services and professional aerial drone photography. Get your quote today!" />
+        <title>3d60° - Professional 3D Services</title>
+        <meta name="description" content="Leading provider of 3D design, prototyping and printing services. Get your quote today!" />
       </Helmet>
 
       <div className="relative overflow-hidden">
@@ -85,7 +85,7 @@ const Home = () => {
                 Our Services
               </h2>
               <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-                Comprehensive solutions for all your 3D and aerial needs
+                Comprehensive solutions for all your 3D needs
               </p>
             </motion.div>
 
@@ -136,9 +136,7 @@ const Home = () => {
             }} transition={{
               duration: 0.8
             }}>
-                <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  Why Choose 3d60°?
-                </h2>
+                <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Why Choose 3D⁶⁰?</h2>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-2" />
@@ -146,12 +144,8 @@ const Home = () => {
                       <span className="font-semibold text-white">Cutting-Edge Technology:</span> High-speed Creality K1 and reliable Ender 3v2 printers
                     </p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2" />
-                    <p className="text-slate-300">
-                      <span className="font-semibold text-white">Professional Drone Services:</span> DJI drone with stunning 4K capabilities
-                    </p>
-                  </div>
+                  
+                    
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-2" />
                     <p className="text-slate-300">
@@ -178,7 +172,7 @@ const Home = () => {
             }} transition={{
               duration: 0.8
             }} className="relative">
-                <img className="rounded-xl shadow-2xl w-full h-auto" alt="3D printing and drone technology showcase" src="https://horizons-cdn.hostinger.com/81a8bfd2-a209-4674-ac1b-ec683451e339/screenshot-2024-08-22-151117-DDQei.png" />
+                <img className="rounded-xl shadow-2xl w-full h-auto" alt="3D printing technology showcase" src="https://horizons-cdn.hostinger.com/81a8bfd2-a209-4674-ac1b-ec683451e339/screenshot-2024-08-22-151117-DDQei.png" />
               </motion.div>
             </div>
           </div>
@@ -200,9 +194,7 @@ const Home = () => {
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Start Your Project?
               </h2>
-              <p className="text-xl text-slate-300 mb-8">
-                Let's bring your ideas to life with our professional 3D and drone services
-              </p>
+              <p className="text-xl text-slate-300 mb-8">Let's bring your ideas to life with our professional 3D services</p>
               <Link to="/contact">
                 <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-lg px-8 py-6">
                   Get a Free Quote
